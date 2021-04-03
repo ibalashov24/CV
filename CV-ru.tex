@@ -1,0 +1,187 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{multicol}
+\input{glyphtounicode}
+
+% Russian
+\usepackage[utf8]{inputenc}
+\usepackage[english,main=russian]{babel}
+
+%\usepackage[default]{sourcesanspro}
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\centering
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+
+
+\begin{center}
+    {\LARGE Илья Балашов} \\ \vspace{2pt}
+    \begin{multicols}{2}
+    \begin{flushleft}
+    \href{{https://github.com/ibalashov24/}}{GitHub}\\
+    \href{{https://www.linkedin.com/in/ibalashov24/}}{LinkedIn}
+    \end{flushleft}
+    
+    \begin{flushright}
+%    \href{{your personal websit link}}{my personal site}\\
+    \href{mailto:{ilya.v.balashov@gmail.com}}{ilya.v.balashov@gmail.com}\\
+    +7 (952) 398-32-88
+    
+    \end{flushright}
+    \end{multicols}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\vspace{-2pt}
+\section{Образование}
+  \resumeSubHeadingListStart
+      \resumeSubheading
+      {Санкт-Петербургский Государственный Университет}{Сентябрь 2017 -- Июль 2021}
+      {Математическое обеспечение и администрирование информационных систем}{Санкт-Петербург}
+	\resumeItem{\textit{Математико-Механический факультет, Ср.балл 4.91/5.00}}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Опыт}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Исследователь, JetBrains Research}{Октябрь 2019 -- Апрель 2021}
+      {\href{https://research.jetbrains.org/groups/plt_lab/projects/pe-for-gpgpu/}{Специализация программ, Лаборатория Языковых Инструментов}}{Санкт-Петербург}
+      \resumeItemListStart
+        \resumeItem{Реализовал эксперименты по специализации программ с разными инструментами \\ (C++, CUDA/OpenCL, разные DSL и LLVM IR)}
+        \resumeItem{Разработал бенчмарки различных алгоритмов на графах (пакет SuiteSparse GraphBLAS)}
+        \resumeItem{Модифицировал инструмент для специализации на базе Clang}
+        \resumeItem{Заканчиваю диплом бакалавра <<Исследование специализации алгоритмов линейной алгебры>> \\ и статью для SYRCoSE}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+
+
+%-----------CERTIFICATIONS-----------
+\section{Проекты}
+ \resumeSubHeadingListStart
+ 	\resumeSubheading{Улучшение Android-приложения TRIK Gamepad }{Июнь 2019 -- Август 2019}
+ 	{\href{{https://play.google.com/store/apps/details?id=com.trikset.gamepad}}{Google Play (Раздел бета-версий)}
+ 	}{}
+ 	\resumeItemListStart
+ 		\resumeItem{Разработал несколько новых экранов}
+ 		\resumeItem{Переделал сетевую часть приложения для поддержки UDP}
+ 		\resumeItem{Покрыл код различными типами тестов и настроил Circle CI}
+ 		\resumeItem{Мой код интегрирован в официальный релиз TRIK Gamepad}
+ 	\resumeItemListEnd
+ 	
+ 	\resumeSubheading{Тестирующая система для программ к роботам ТРИК}{Февраль 2019 -- Июнь 2019}
+ 	{\href{https://github.com/ibalashov24/semester\_4\_coursework}{Github}}
+ 	{}
+ 	\resumeItemListStart
+ 	\resumeItem{Интегрировал симулятор робота ТРИК с Travis CI}
+ 	\resumeItem{Реализовал возможность использовать симулятор как облачную тестирующую систему}
+ 	\resumeItem{Система была использована разработчиками ТРИК для тестирования различных программ проекта}
+ 	\resumeItemListEnd
+ 	
+ 	\resumeSubheading{Плагин Google Drive среды визуального программирования REAL.NET}{Сентябрь 2018 -- Декабрь 2018}
+ 	{\href{https://github.com/yurii-litvinov/REAL.NET/pull/61/}{Github}}{}
+ 	\resumeItemListStart
+ 	\resumeItem{Разработал плагин с функциональностью файлового менеджера на стеке .NET}
+ 	\resumeItem{Реализовал интеграцию плагина с Google Drive}
+ 	\resumeItem{Протестировал плагин на добровольцах, были получены положительные отзывы}
+ 	\resumeItemListEnd
+ \resumeSubHeadingListEnd
+ 
+ %-----------PROGRAMMING SKILLS-----------
+ \section{Навыки}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+ 	\small{\item{
+ 			\textbf{Языки программирования и технологии}{:
+ 				\begin{itemize}
+ 					\item C/C++, SQL, Git (средний уровень)
+ 					\item Python, Linux, Docker, CUDA/OpenCL, стек .NET, Java/Kotlin (есть опыт)
+ 					\item Haskell, LLVM, x86 (знакомство)
+ 				\end{itemize} }
+
+ 			\textbf{Языки}{:\\ 
+ 				\begin{itemize}
+ 					\item Русский (родной)
+ 					\item Английский (B2, Upper Intermediate)
+ 				\end{itemize}}
+ 	}}
+ \end{itemize}
+
+\end{document}
