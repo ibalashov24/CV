@@ -12,6 +12,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{multicol}
+\usepackage[svgnames]{xcolor}
 \input{glyphtounicode}
 
 %\usepackage[default]{sourcesanspro}
@@ -31,6 +32,7 @@
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
+\hypersetup{colorlinks=true,allcolors=DarkBlue}
 
 \raggedbottom
 \raggedright
@@ -85,11 +87,11 @@
 
 
 \begin{center}
-    {\LARGE Ilya Balashov} \\ \vspace{2pt}
+    {\LARGE Ilya Balashov \\ \small  Software Engineer} \\ \vspace{2pt}
     \begin{multicols}{2}
     \begin{flushleft}
-    \href{{https://www.linkedin.com/in/ibalashov24/}}{LinkedIn: https://www.linkedin.com/in/ibalashov24/}
-    \href{{https://github.com/ibalashov24/}}{GitHub: \ \  https://github.com/ibalashov24/} \\
+    LinkedIn: \href{{https://www.linkedin.com/in/ibalashov24/}}{ https://www.linkedin.com/in/ilya-balashov/}
+    GitHub: \href{{https://github.com/ibalashov24/}}{\ \  https://github.com/ibalashov24/} \\
     \end{flushleft}
     
     \begin{flushright}
@@ -108,8 +110,9 @@
   \resumeSubHeadingListStart
       \resumeSubheading
       {Saint Petersburg State University -- Faculty of Math and Mechanics}{Sep. 2017 -- Jul. 2021}
-      {BSc, Computer Science and Software, GPA 4.96/5.00, with honors}{Saint Petersburg, Russia}
-      \resumeSubItem{Activities: volunteer of the faculty student council, Freshmen Buddy program member}{}
+      {\href{https://diploma.spbu.ru/en?rn=0911006\&bd=19990809\&h=c41f9286a9064c78a1ef2309af6be0eb}{BSc, major in Computer Science and Software, GPA 4.96/5.00,with honors}}{Saint Petersburg, Russia}
+      \resumeSubItem{Second most recognized university in Russia, in top 250 of the QS world ranking}{}
+      \resumeSubItem{Activities: volunteer of the faculty student council, Freshmen Buddy program activist}{}
   \resumeSubHeadingListEnd
 
 
@@ -118,11 +121,12 @@
   \resumeSubHeadingListStart
   	\resumeSubheading
   	  {Software Engineer, Itiviti, a Broadridge Business}{May 2021 -- present}
-  	  {High Availability team, Tbricks platform}{Saint Petersburg, Russia}
+  	  {\href{https://itiviti.com/tbricks}{High Availability team, Tbricks platform}}{Saint Petersburg, Russia}
   	  \resumeItemListStart
   	  	\resumeItem{Implemented a platform log analysis tool; 30+ major bugs were found using the tool}
-  	  	\resumeItem{Developed platform configuration exporting app; \\The app was deployed to a number of major clients, including a top-tier investment bank}
-  	  	\resumeItem{Participated in Hashicorp Consul integration in place of legacy in-house Zeroconf/mDNS implementation}
+  	  	\resumeItem{Developed platform configuration exporting app; \\The app was deployed to a number of major clients, including top-tier investment banks}
+  	  	\resumeItem{Created Nagios configuration distribution tool between different nodes;\\
+  	  	Integrated the tool into existing administration and distribution infrastructure}
   	  \resumeItemListEnd
   
     \resumeSubheading
@@ -131,8 +135,8 @@
       \resumeItemListStart
         \resumeItem{Implemented experiments on partial evaluation (C++, CUDA/OpenCL, custom DSLs and LLVM IR)}
         \resumeItem{Developed benchmarks on graph algorithms performance (SuiteSparse GraphBLAS)}
-        \resumeItem{Modified Clang slightly for partial evaluation framework support}
-        \resumeItem{Finishing a bachelor thesis "Partial Evaluation Of Linear Algebra Algorithms" and a paper for SYRCoSE}
+        \resumeItem{Sketched a Clang modification for partial evaluation framework support}
+        \resumeItem{Finished bachelor thesis "Partial Evaluation Of Linear Algebra Algorithms" and a paper for SYRCoSE}
     \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -141,7 +145,7 @@
 
 
 %-----------CERTIFICATIONS-----------
-\section{Projects}
+\section{Noticable Projects}
  \resumeSubHeadingListStart
  	\resumeSubheading{TRIK Gamepad Android application modification}{Jun. 2019 -- Aug. 2019}
  	{\href{{https://play.google.com/store/apps/details?id=com.trikset.gamepad}}{Google Play}
@@ -177,8 +181,8 @@
  	\small{\item{
  			\textbf{Programming Languages and Technologies}{:
  				\begin{itemize}
- 					\item C/C++, SQL, Git (medium)
- 					\item Python, Linux, Docker, CUDA/OpenCL, Java/Kotlin, .NET stack (some experience)
+ 					\item C++17, Boost, C, SQL, Git, Linux, Python (industrial experience)
+ 					\item Docker, CUDA/OpenCL, Java/Kotlin, .NET stack (some experience)
  					\item Haskell, LLVM, x86 (familiarity)
  				\end{itemize} }
 
