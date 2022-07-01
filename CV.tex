@@ -1,4 +1,4 @@
-\documentclass[letterpaper,10pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -12,6 +12,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{multicol}
+\usepackage{setspace}
 \usepackage[svgnames]{xcolor}
 \input{glyphtounicode}
 
@@ -54,8 +55,8 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textbf{\vspace{-3pt}#1} & #2 \\
+      \textit{\small#3} & \textit{\small \vspace{3pt} #4} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -82,6 +83,8 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+\setstretch{1.15}
+
 \begin{document}
 
 
@@ -105,26 +108,29 @@
 
 
 %-----------EDUCATION-----------
-\vspace{-2pt}
-\section{Education}
+\vspace{-20pt}
+\section{\textbf{Education}}
   \resumeSubHeadingListStart
       \resumeSubheading
       {Saint Petersburg State University -- Faculty of Math and Mechanics}{Sep. 2017 -- Jul. 2021}
-      {\href{https://diploma.spbu.ru/en?rn=0911006\&bd=19990809\&h=c41f9286a9064c78a1ef2309af6be0eb}{BSc, major in Computer Science and Software, GPA 4.96/5.00, with honors}}{Saint Petersburg, Russia}
-      \resumeSubItem{Second most recognized university in Russia, in top 250 of the QS world ranking}{}
-      \resumeSubItem{Activities: volunteer of the faculty student council, freshmen onboarding activist}{}
+      {\href{https://diploma.spbu.ru/en?rn=0911006\&bd=19990809\&h=c41f9286a9064c78a1ef2309af6be0eb}
+      {BSc, major in Computer Science and Software, GPA 4.96/5.00, with honors}}{Saint Petersburg, Russia}
+      \resumeItemListStart
+      	\resumeItem{\textbf{Second most recognized} university in Russia, in top 250 of the QS world ranking}{}
+      	\resumeItem{Activities: volunteer of the faculty student council, freshmen onboarding activist}{}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 
 %-----------EXPERIENCE-----------
-\section{Experience}
+\vspace{-17pt}
+\section{\textbf{Experience}}
   \resumeSubHeadingListStart
   	\resumeSubheading
   	  {Software Engineer, Itiviti, a Broadridge Business}{May 2021 -- present}
   	  {\href{https://itiviti.com/tbricks}{High Availability team, Tbricks platform}}{Saint Petersburg, Russia}
   	  \resumeItemListStart
-  	  	\resumeItem{\textbf{Created} Nagios configuration distribution tool between different nodes;\\
-  	  	\textbf{Integrated} the tool into existing administration and distribution infrastructure}
+  	  	\resumeItem{\textbf{Created and integrated} Nagios configuration distribution tool between different nodes}
     	\resumeItem{\textbf{Integrated} HashiCorp Consul instead of a legacy in-house service discovery solution;\\ The integration was dispatched to several setups with 20+ nodes distributed geographically}
   	  	\resumeItem{\textbf{Developed and maintained} platform configuration exporting app; \\The app was deployed to a number of major clients, including \textbf{top-tier investment banks};\\
   	  	\textbf{Led a group} of two interns (SWE and manual QA), interacted with Product Managers and Support}
@@ -133,12 +139,11 @@
   
     \resumeSubheading
       {Researcher, JetBrains Research}{Oct. 2019 -- Jun. 2021}
-      {\href{https://research.jetbrains.org/groups/plt_lab/projects/pe-for-gpgpu/}{Partial evaluation research in Programming Languages and Tools lab}}{Saint Petersburg, Russia}
+	  {\href{https://research.jetbrains.org/groups/plt_lab/projects/pe-for-gpgpu/}{Partial evaluation research in Programming Languages and Tools lab}}{Saint Petersburg, Russia}
       \resumeItemListStart
-        \resumeItem{\textbf{Implemented} experiments on partial evaluation (C++, CUDA/OpenCL, custom DSLs and LLVM IR)}
+        \resumeItem{\textbf{Implemented} experiments on program partial evaluation; reported the results on several talks}
         \resumeItem{\textbf{Developed} benchmarks on graph algorithms performance (SuiteSparse GraphBLAS)}
         \resumeItem{\textbf{Sketched} a Clang modification for partial evaluation framework support}
-        \resumeItem{\textbf{Finished} bachelor thesis "Partial Evaluation Of Linear Algebra Algorithms" and a paper for SYRCoSE}
         \resumeItem{Keywords: Research, C++, Python, GTest/GBenchmark, Git, LLVM, Docker, SQL}
     \resumeItemListEnd
 
@@ -148,53 +153,70 @@
 
 
 %-----------CERTIFICATIONS-----------
-\section{Noticable Projects}
+\vspace{-17pt}
+\section{\textbf{Noticable Projects}}
  \resumeSubHeadingListStart
  	\resumeSubheading{TRIK Gamepad Android application modification}{Jun. 2019 -- Aug. 2019}
  	{\href{{https://play.google.com/store/apps/details?id=com.trikset.gamepad}}{Google Play}
  	}{}
  	\resumeItemListStart
  		\resumeItem{Implemented several new screens and remade networking code}
- 		\resumeItem{Covered code with different types of tests}
- 		\resumeItem{Set up Continuous Integration with Circle CI}
- 		\resumeItem{My code was integrated into the production TRIK Gamepad code}
+ 		\resumeItem{Covered code with different types of tests; set up Circle CI}
  	\resumeItemListEnd
  	
  	\resumeSubheading{Testing system for TRIK robots programs}{Feb. 2019 -- Jun. 2019}
  	{\href{https://github.com/ibalashov24/semester\_4\_coursework}{Github}}
  	{}
  	\resumeItemListStart
- 	\resumeItem{Connected TRIK robot simulator with Travis CI. The setup was later used for integration testing}
- 	\resumeItem{Implemented an ability to use simulator as a cloud-based testing system}
+ 	\resumeItem{Connected TRIK robot simulator with Travis CI; the setup was later used for integration testing}
  	\resumeItem{The system was lately applied for different TRIK tools testing}
  	\resumeItemListEnd
  	
- 	\resumeSubheading{Google Drive integration plugin for REAL.NET visual programming environment}{Sep. 2018 -- Dec. 2018}
+ 	\resumeSubheading{Google Drive plugin for a visual programming environment}{Sep. 2018 -- Dec. 2018}
  	{\href{https://github.com/yurii-litvinov/REAL.NET/pull/61/}{Github}}{}
  	\resumeItemListStart
- 	\resumeItem{Implemented .NET-based plugin with a file manager functionality}
- 	\resumeItem{Connected the plugin with Google Drive REST API}
+ 	\resumeItem{Implemented a .NET-based file manager using Google Drive REST API}
  	\resumeItem{The plugin received positive reviews from polled fellow students}
  	\resumeItemListEnd
  \resumeSubHeadingListEnd
  
  %-----------PROGRAMMING SKILLS-----------
- \section{Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
- 	\small{\item{
- 			\textbf{Programming Languages and Technologies}{:
- 				\begin{itemize}
- 					\item C++17, Python, C, SQL, Git, Boost, Linux, Bash (demonstrated experience)
- 					\item Consul, Docker, REST, CUDA/OpenCL, Java/Kotlin, .NET stack, Perl (some experience)
- 					\item Haskell, LLVM, x86 (familiarity)
- 				\end{itemize} }
+ \vspace{-17pt}
+ \section{\textbf{Skills}}
+ \resumeSubHeadingListStart
+ \resumeSubheading{Programming Languages and Technologies}{}
+ {\vspace{-35pt}}{}{}
+ \resumeItemListStart
+ 	\resumeItem{C++17, Python, C, SQL, Git, Boost, Linux, Bash (demonstrated experience)}
+ 	\resumeItem{Consul, Docker, REST, CUDA/OpenCL, Java/Kotlin, .NET stack, Perl (some experience)}
+ 	\resumeItem{Haskell, LLVM, x86 (familiarity)}
+ \resumeItemListEnd
+ 
+ \resumeSubheading{Languages}{}
+ {\vspace{-35pt}}
+ {}
+ \resumeItemListStart
+ 	\resumeItem{English (CEFR B2, Upper Intermediate)}
+ 	\resumeItem{Russian (Native)}
+ \resumeItemListEnd
+\resumeSubHeadingListEnd
 
- 			\textbf{Languages}{:\\ 
- 				\begin{itemize}
- 					\item Russian (Native)
- 					\item English (B2, Upper Intermediate)
- 				\end{itemize}}
- 	}}
- \end{itemize}
+ 
+% \begin{itemize}[leftmargin=0.15in, label={}]
+% 	\small{\item{
+% 			\textbf{Programming Languages and Technologies}{:
+% 				\begin{itemize}
+% 					\item C++17, Python, C, SQL, Git, Boost, Linux, Bash (demonstrated experience)
+% 					\item Consul, Docker, REST, CUDA/OpenCL, Java/Kotlin, .NET stack, Perl (some experience)
+% 					\item Haskell, LLVM, x86 (familiarity)
+% 				\end{itemize} }
+%
+% 			\textbf{Languages}{:\\ 
+% 				\begin{itemize}
+% 					\item Russian (Native)
+% 					\item English (B2, Upper Intermediate)
+% 				\end{itemize}}
+% 	}}
+% \end{itemize}
 
 \end{document}
